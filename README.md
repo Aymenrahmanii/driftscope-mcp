@@ -1,4 +1,3 @@
-```markdown
 # 🔬 DriftScope — Autonomous MLOps & Statistical Diagnostics MCP Server
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg?style=flat&logo=python&logoColor=white)](https://python.org)
@@ -151,4 +150,3 @@ uv run mcp dev server.py
 - **Framework**: FastMCP (Starlette, Uvicorn, SSE)
 - **Data & Math**: Polars, NumPy, SciPy, Scikit-learn, HTTPX
 - **Infrastructure**: Render Web Services, GitHub
-```

@@ -87,6 +87,18 @@ def check_feature_drift(
 
 
 @mcp.tool()
+def get_monitoring_policy() -> str:
+    """Returns organizational reference guidelines for drift and model monitoring thresholds."""
+    return """
+    # MLOps Monitoring Thresholds Policy:
+    - KS-Test: Reject null hypothesis if p-value < 0.05 (statistically significant shift).
+    - PSI:
+      * < 0.10: Stable, no intervention.
+      * 0.10 - 0.20: Warning zone, monitor closely.
+      * > 0.20: Critical drift, automatic fallback or retraining trigger.
+    """
+
+@mcp.tool()
 def compute_psi(
     baseline_csv: str,
     current_csv: str,

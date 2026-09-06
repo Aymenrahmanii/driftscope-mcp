@@ -1,0 +1,25 @@
+[project]
+name = "driftscope-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Aymenrahmanii", email = "aymen@example.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]<2",
+    "polars>=1.44.1",
+    "pydantic>=2.13.5",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.1",
+    "starlette>=1.6.0",
+    "uvicorn>=0.52.4",
+]
+
+[project.scripts]
+driftscope-mcp = "driftscope_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
